@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<script>
+    let eng = ["dog", "cat", "chicken"]
+    let vie = ["cho", 'meo', 'ga']
+    function find() {
+        let keyword = prompt("Nhập từ cần tìm: ")
+        for (let i = 0; i < eng.length; i++) {
+            if (eng[i] === keyword) return i
+        }
+        return -1
+    }
+    function translate() {
+        let i = find()
+        if (i === -1) {
+            alert('Không tìm thấy')
+        } else {
+            alert(' Từ tương ứng là: ' + vie[i])
+        }
+    }
+    translate()
+</script>
+</body>
+</html>
